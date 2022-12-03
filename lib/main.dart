@@ -59,17 +59,12 @@ class _MyAppState extends State<MyApp> {
               FormSuhu(
                 nilaiCelcius: suhuInput,
               ),
-              DropdownButton<String>(
-                //Create Map
-                items: listItem.map((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
-                value: null,
-                onChanged: (String? changeValue) {},
-                //Set Nullable type, if no nullable type it will get error
+              TextSuhu(
+                hasilKelvin: _kelvin,
+                hasilReamor: _reamor,
+              ),
+              ButtonSuhu(
+                afterClick: konversiSuhu,
               ),
             ],
           ),
